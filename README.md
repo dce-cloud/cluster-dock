@@ -3,14 +3,12 @@
 基于 Docker Compose 搭建的集群服务环境
 
 # IP地址
+
 内部IP地址从 172.25.29.3 开始
 
 # 服务清单
 
-## Cluster (集群服务)
-172.25.29.3 start
-
-### Ndb Cluster (172.21.10.3~172.21.10.11)
+## Ndb Cluster (172.25.29.3~172.25.29.15)
 | status | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|---|
 | phpmyadmin | 172.21.10.3 | 172.20.10.3 | latest | |
@@ -23,14 +21,14 @@
 | ndb-management | 172.21.10.10 | 172.20.10.10 | latest | |
 
 
-### RABBITMQ CLUSTER (172.21.2.3) [待定]
+## RABBITMQ CLUSTER (172.25.29.16) [待定]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | rabbitmq1 | 172.21.2.3 | 172.20.2.3 | 3.12 | |
 | rabbitmq2 | 172.21.2.4 | 172.20.2.4 | 3.12 | |
 | rabbitmq3 | 172.21.2.5 | 172.20.2.5 | 3.12 | |
 
-### KAFKA KRAFT CLUSTER (172.21.2.13) [完成]
+## KAFKA KRAFT CLUSTER (172.21.2.13) [完成]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | krc-kafka-ui | 172.21.2.13 | 172.20.2.210 | 3.6 | |
@@ -41,7 +39,7 @@
 | krc-kafka5 | 172.21.2.13 | 172.20.2.215 | 3.6 | |
 | krc-kafka6 | 172.21.2.13 | 172.20.2.216 | 3.6 | |
 
-### KAFKA CLUSTER (172.21.2.30) [完成]
+## KAFKA CLUSTER (172.21.2.30) [完成]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | kc-kafka-ui | 172.21.2.220 | 172.20.2.220 | latest | |
@@ -54,7 +52,7 @@
 | kc-kafka5 | 172.21.2.227 | 172.20.2.227 | latest | |
 | kc-kafka6 | 172.21.2.228 | 172.20.2.228 | latest | |
 
-### ROCKETMQ CLUSTER (172.21.2.50) [待定]
+## ROCKETMQ CLUSTER (172.21.2.50) [待定]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | rocketmq-dashboard | 172.21.2.11 | 172.20.2.11 | latest | |
@@ -74,7 +72,7 @@
 | rocketmq-c-broker5 | 172.21.3.16 | 172.20.3.16 | latest | |
 | rocketmq-c-broker6 | 172.21.3.17 | 172.20.3.17 | latest | |
 
-### Pulsar Cluster (172.21.2.70) [待定]
+## Pulsar Cluster (172.21.2.70) [待定]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | pulsar-manager | 172.21.2.82 | 172.20.2.82 | 0.4.0 |
@@ -87,7 +85,7 @@
 | pulsar-broker2 | 172.21.2.87 | 172.20.2.87 | latest |
 | pulsar-broker3 | 172.21.2.88 | 172.20.2.88 | latest |
 
-### NSQ CLUSTER (172.21.2.90) [待定]
+## NSQ CLUSTER (172.21.2.90) [待定]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | nsqadmin | 172.21.2.110 | 172.20.2.110 | latest | |
@@ -98,7 +96,7 @@
 | nsqd2 | 172.21.2.101 | 172.20.2.101 | latest | |
 | nsqd3 | 172.21.2.101 | 172.20.2.101 | latest | |
 
-### NATS CLUSTER (172.21.2.100) [待定]
+## NATS CLUSTER (172.21.2.100) [待定]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | nats-box | 172.21.2.240 | 172.20.2.240 | latest | |
@@ -106,7 +104,7 @@
 | nats2 | 172.21.2.242 | 172.20.2.242 | latest | |
 | nats3 | 172.21.2.243 | 172.20.2.243 | latest | |
 
-### ETCD CLUSTER (172.21.2.110) [完成]
+## ETCD CLUSTER (172.21.2.110) [完成]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | ec-etcd-ui | 172.21.2.170 | 172.20.2.170 | | |
@@ -114,7 +112,7 @@
 | ec-etcd2 | 172.21.2.172 | 172.20.2.172 | v3.5.2 | |
 | ec-etcd3 | 172.21.2.173 | 172.20.2.173 | v3.5.2 | |
 
-### ZOOKEEPER CLUSTER (172.21.2.120) [完成]
+## ZOOKEEPER CLUSTER (172.21.2.120) [完成]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | zc-zoonavagitor | 172.21.2.190 | 172.20.2.190 | | |
@@ -122,7 +120,7 @@
 | zookeeper2 | 172.21.2.192 | 172.20.2.192 | latest | |
 | zookeeper3 | 172.21.2.193 | 172.20.2.193 | latest | |
 
-### DTM CLUSTER (172.21.2.130) [完成]
+## DTM CLUSTER (172.21.2.130) [完成]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | dtm-mysql | 172.21.3.80 | 172.20.3.80 | latest |
@@ -131,7 +129,7 @@
 | dtm2 | 172.21.3.83 | 172.20.3.83 | latest |
 | dtm3 | 172.21.3.84 | 172.20.3.84 | latest |
 
-### MEMCACHED CLUSTER (172.21.2.140) [待定]
+## MEMCACHED CLUSTER (172.21.2.140) [待定]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | memcached1 | 172.21.3.180 | 172.20.3.180 | latest | |
@@ -139,7 +137,7 @@
 | memcached3 | 172.21.3.182 | 172.20.3.182 | latest | |
 | haproxy1 | 172.21.3.183 | 172.20.3.183 | latest | |
 
-### MINIO CLUSTER (172.21.2.150) [待定]
+## MINIO CLUSTER (172.21.2.150) [待定]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | nginx | 172.21.3.140 | 172.20.3.140 | latest | |
@@ -147,7 +145,7 @@
 | minio2 | 172.21.3.142 | 172.20.3.142 | latest | |
 | minio3 | 172.21.3.143 | 172.20.3.143 | latest | |
 
-### REDIS MSR (172.21.2.160) [完成]
+## REDIS MSR (172.21.2.160) [完成]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | redis_1 | 172.21.3.180 | 172.20.3.180 | latest | |
@@ -158,7 +156,7 @@
 | sentinel2 | 172.21.3.185 | 172.20.3.185 | latest | |
 | sentinel3 | 172.21.3.186 | 172.20.3.186 | latest | |
 
-### REDIS CLUSTER (172.21.2.170) [完成]
+## REDIS CLUSTER (172.21.2.170) [完成]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | redis-box | 172.21.3.190 | 172.20.3.190 | latest | |
@@ -172,14 +170,14 @@
 | redis8 | 172.21.3.198 | 172.20.3.198 | latest | |
 | redis9 | 172.21.3.199 | 172.20.3.199 | latest | |
 
-### NACOS CLUSTER (172.21.2.190) [待定]
+## NACOS CLUSTER (172.21.2.190) [待定]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | nacos1 | 172.21.3.211 | 172.20.3.211 | latest | |
 | nacos2 | 172.21.3.211 | 172.20.3.211 | latest | |
 | nacos3 | 172.21.3.211 | 172.20.3.211 | latest | |
 
-### ELASTIC CLUSTER (172.21.2.200) [待定]
+## ELASTIC CLUSTER (172.21.2.200) [待定]
 | service | backend ip | frontend ip | version | 备注 |
 |---|---|---|---|---|
 | es-setup | 172.21.2.200 | 172.20.2.200 | latest |
@@ -190,11 +188,8 @@
 
 
 # 使用到的镜像
-- 默认使用docker.io 镜像
-- 若想使用自定义仓库镜像，需要定义 `DOCKER_REGISTRY_URL` 变量
-
 ```json
 [
-    "traefik:v3.4",
+    "",
 ]
 ```
